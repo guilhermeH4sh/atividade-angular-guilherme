@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-header bg-primary text-white">
+    Calcular Média
+  </div>
+
+  <div class="card-body">
+    <div class="mb-3">
+      <label class="form-label">AC1</label>
+      <input type="number" class="form-control" [(ngModel)]="ac1">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">AC2</label>
+      <input type="number" class="form-control" [(ngModel)]="ac2">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">AG</label>
+      <input type="number" class="form-control" [(ngModel)]="ag">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">AF</label>
+      <input type="number" class="form-control" [(ngModel)]="af">
+    </div>
+
+    <button class="btn btn-success" (click)="calcularMedia()">
+      Calcular
+    </button>
+
+    <div class="alert alert-info mt-3" *ngIf="resultado">
+      <p><strong>Média Final:</strong> {{ mediaFinal.toFixed(2) }}</p>
+      <p><strong>Situação:</strong> {{ resultado }}</p>
+    </div>
+  </div>
+</div>
